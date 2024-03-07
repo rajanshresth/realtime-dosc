@@ -4,7 +4,10 @@
 
 html,body {
   height: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
 }
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -51,6 +54,7 @@ html,body {
     --ring: 142.4 71.8% 29.2%;
   }
 }
+
 
 @layer base {
   * {

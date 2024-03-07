@@ -61,24 +61,26 @@ const LoginPage = () => {
           justify-left
           items-center"
           >
-            <Image
+            {/* <Image
               src={"/vercel.svg"}
               alt="Logo of the application"
               width={50}
               height={50}
-            />
+            /> */}
             <span
               className="font-semibold
           dark:text-white text-4xl first-letter:ml-2"
             >
-              cypress.
+              RealEdt.
             </span>
           </Link>
           <FormDescription
             className="
         text-foreground/60"
           >
-            An all-In-One Collaboration and Productivity Platform
+            <p className="font-semibold text-white text-sm">
+              An all-In-One Collaboration and Productivity Platform
+            </p>
           </FormDescription>
           <FormField
             disabled={isLoading}
@@ -87,7 +89,12 @@ const LoginPage = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="email" placeholder="Email" {...field} />
+                  <Input
+                    type="email"
+                    placeholder="Email"
+                    {...field}
+                    className="text-white"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -100,7 +107,12 @@ const LoginPage = () => {
             render={({ field }) => (
               <FormItem>
                 <FormControl>
-                  <Input type="password" placeholder="Password" {...field} />
+                  <Input
+                    type="password"
+                    placeholder="Password"
+                    {...field}
+                    className="text-white"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -116,7 +128,9 @@ const LoginPage = () => {
             {!isLoading ? "Login" : <Loader />}
           </Button>
           <span className="self-container">
-            Dont have an account?{" "}
+            <span className="text-white font-semibold">
+              Dont have an account?{" "}
+            </span>
             <Link href="/signup" className="text-primary">
               Sign Up
             </Link>
